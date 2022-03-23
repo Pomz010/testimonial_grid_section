@@ -9,9 +9,9 @@ const browserSync = require('browser-sync').create();
 
 
 // COPY HTML
-function copyHtml(){
-    return src('./*.html').pipe(dest('./public'));
-}
+// function copyHtml(){
+//     return src('./*.html').pipe(dest('./public'));
+// }
 
 // SASS FOR MINIFIED CSS
 function compileScss(){
@@ -50,10 +50,10 @@ function webpImage(){
 function watchTask(){
     browserSync.init({
         server: {
-            baseDir: "./public"
+            baseDir: "./"
         }
     });
-    watch('./*.html', copyHtml);
+    // watch('./*.html', copyHtml);
     watch('src/sass/**/*.scss', compileScss).on('change', browserSync.reload);
     watch('src/js/*.js', jsmin).on('change', browserSync.reload);
     watch('src/img/**/*.{jpg,png,svg}', optimizeImg);
@@ -63,7 +63,7 @@ function watchTask(){
 
 // DEFAULT GULP
 exports.default = series(
-    copyHtml,
+    // copyHtml,
     compileScss,
     jsmin,
     optimizeImg,
