@@ -115,12 +115,12 @@ body {
     position: relative;
 
     .quote-icon {
-      font-size: 16rem;
+      font-size: 14rem;
       position: absolute;
       z-index: 0;
       color: hsl(263, 67%, 70%);
-      right: 4rem;
-      top: -4.75rem;
+      right: 0;
+      top: -4.25rem;
     }
   }
 
@@ -207,6 +207,12 @@ body {
       // First testimonial container
     .testimony-container:nth-child(1) {
       grid-column: 1 / span 6;
+
+      .quote-icon {
+        right: 4rem;
+        font-size: 16rem;
+        top: -5rem;
+      }
     }
 
     // Second testimonial container
