@@ -94,6 +94,8 @@ body {
     font-weight: 500;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
+    z-index: 2;
+    position: relative;
   }
 
   // main paragraph
@@ -110,6 +112,16 @@ body {
   .testimony-container:nth-child(1) {
     background-color: hsl(263, 55%, 52%);
     color: white;
+    position: relative;
+
+    .quote-icon {
+      font-size: 16rem;
+      position: absolute;
+      z-index: 0;
+      color: hsl(263, 67%, 70%);
+      right: 4rem;
+      top: -4.75rem;
+    }
   }
 
   // Second testimonial container
